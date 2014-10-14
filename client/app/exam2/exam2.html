@@ -1,0 +1,11 @@
+<div class="col-md-12">
+<p>This is the exam2 view.</p>
+{{id}}
+<p>This parameter is as follows:</p>
+<pre>
+    url: '/{id:[0-9|a-z]}',
+    templateUrl: function($stateParams) {
+        return 'app/exam2/'+$stateParams.id+'/exam2.html';
+    }
+</pre>
+</div>
