@@ -11,7 +11,7 @@ angular.module('angularRouteApp')
           if ($stateParams.id2==='') {
           	return 'app/' + $stateParams.id1 + '/exam7.html'
           } else {
-            return 'app/' + $stateParams.id1 + '/' + $stateParams.id2 + '/exam7.html'
+            return 'app/' + $stateParams.id1 + $stateParams.id2 + '/exam7.html'
           }
           // return 'app/exam7/exam7.html';
         },
