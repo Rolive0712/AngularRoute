@@ -1,5 +1,17 @@
 <p>fuga.html</p>
-<a href="{{id1}}{{id2}}/hoge">hoge</a>
-<a href="{{id1}}{{id2}}/fuga">fuga</a>
+<a ng-href="{{id1}}{{id2}}/hoge">hoge</a>
+<a ng-href="{{id1}}{{id2}}/fuga">fuga</a>
+
 id1:{{id1}}
 id2:{{id2}}
+
+<form class="form" name="form" ng-submit="submit(form)" ng-controller="FugaCtrl">
+userType: <input name="input" ng-model="userType" required>
+<span class="error" ng-show="form.input.$error.required">Required!</span><br>
+<tt>userType = {{userType}}</tt><br>
+<tt>form.input.$valid = {{form.input.$valid}}</tt><br>
+<tt>form.input.$error = {{form.input.$error}}</tt><br>
+<tt>form.$valid = {{form.$valid}}</tt><br>
+<tt>form.$error.required = {{!!form.$error.required}}</tt><br>
+<input type="submit" id="submit" value="Submit" />
+</form>
